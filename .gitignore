@@ -1,0 +1,12 @@
+# Ignore dist 
+./dist
+
+# Ignore venv
+./venv
+
+# Ignore log files
+*.log
+
+# Ignore environment variables
+.env
+
