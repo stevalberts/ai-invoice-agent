@@ -11,4 +11,4 @@
 .env
 
 # Ignore dataset folder
-~/development/invoice-agent/dataset/
+dataset/
