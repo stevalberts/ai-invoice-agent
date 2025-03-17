@@ -3,6 +3,7 @@ import httpx
 from typing import List, Union
 from pydantic_ai import Agent, BinaryContent
 from pydantic_ai.models.gemini import GeminiModel
+from dotenv import load_dotenv
 
 from docling.document_converter import DocumentConverter
 
@@ -22,6 +23,9 @@ class GeminiDocumentProcessor:
             "Analyze the given images and PDFs and provide detailed descriptions."
         ),
     ):
+        # Load environment variables from .env file
+        load_dotenv()
+        
         # Load API key from environment variables
         self.api_key = os.getenv("GEMINI_API_KEY")
         if not self.api_key:
@@ -59,9 +63,8 @@ class GeminiDocumentProcessor:
 
         for res in conv_results:
             print(f"Document {res.input.file.name} converted.")
-            print(res.document.export_to_markdown())
-            print(res.document.model_dump_json())
-            print("\n\n")
+            # print(res.document.export_to_markdown())
+            print("\n")
             
 
 def simple_check_file_type(file_path):

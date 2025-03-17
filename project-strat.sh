@@ -1,3 +1,6 @@
+# Activate the virtual environment
+source .venv/bin/activate
+
 ai_agent_project/
 │── api/                            # API logic
 │   │── __init__.py
