@@ -10,3 +10,5 @@
 # Ignore environment variables
 .env
 
+# Ignore dataset folder
+./dataset
